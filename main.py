@@ -49,9 +49,7 @@ def get_info(link_name):
       job_info.append(row.find_all("td")[0].text)
 
     return job_info
-    
-      
-    
+   
      
 def save_file(file_name, job_info):
   file = open(f"{file_name}.csv", mode="w")
@@ -66,7 +64,6 @@ def save_file(file_name, job_info):
   
   return   
 
-
 def main():
   for brand_a in brand_list:
     url_info = get_url(brand_a)
@@ -75,7 +72,4 @@ def main():
     save_file(url_info[0], job_list)
     
 main()
-
-
-
 
